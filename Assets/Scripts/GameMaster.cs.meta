@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: a152172c28fb6954aa2e4b7df039a597
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - enemyPrefab: {fileID: 6018257214488131543, guid: 329719da1d0980c4299b38587fe44e48,
+      type: 3}
+  - EnemySpawnPoint: {instanceID: 0}
+  - TowerPrefab: {instanceID: 0}
+  - TowerSpawnPoint: {instanceID: 0}
+  - waveCountdownText: {instanceID: 0}
+  - hpText: {instanceID: 0}
+  - moneyText: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

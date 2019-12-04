@@ -7,10 +7,19 @@ public class Bullet : MonoBehaviour
 	public float speed = 50f;
 	public GameObject impactEffect;
 
+    private float bulletPower;
+
+    // Turret.cs에서 접근하는 총알의 목표 설정
 	public void Seek(Transform _target)
 	{
 		target = _target;
 	}
+
+    // Turret.cs에서 접근하는 총알의 세기 설정
+    public void setBulletPower(float attackPower)
+    {
+        bulletPower = attackPower;
+    }
 
     // Update is called once per frame
     void Update()
@@ -38,7 +47,7 @@ public class Bullet : MonoBehaviour
     	GameObject effectIns = (GameObject) Instantiate(impactEffect, transform.position, transform.rotation);
     	Destroy(effectIns, 2f);
 
-    	Destroy(target.gameObject);
+        target.GetComponent<Enemy>().Damaged(bulletPower);
     	Destroy(gameObject);
     }
 }
