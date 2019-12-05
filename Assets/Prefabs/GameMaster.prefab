@@ -46,10 +46,12 @@ MonoBehaviour:
   enemyPrefab: {fileID: 6489963771152984242, guid: 329719da1d0980c4299b38587fe44e48,
     type: 3}
   EnemySpawnPoint: {fileID: 0}
-  TowerPrefab: {fileID: 855242618401495415, guid: 8079c7a6668defa42a48d3c6458319ae,
+  Tier1TowerPrefab: {fileID: 855242618401495415, guid: 8079c7a6668defa42a48d3c6458319ae,
+    type: 3}
+  Tier2TowerPrefab: {fileID: 1641714024248568325, guid: a8080036fd6637a4caf30eee292839a0,
     type: 3}
   TowerSpawnPoint: {fileID: 0}
-  timeBetweenWaves: 5.9
+  timeBetweenWaves: 50
   waveCountdownText: {fileID: 0}
   hpText: {fileID: 0}
   moneyText: {fileID: 0}

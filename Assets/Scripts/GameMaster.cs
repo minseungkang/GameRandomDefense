@@ -7,10 +7,11 @@ public class GameMaster : MonoBehaviour
 	public Transform enemyPrefab;
 	public Transform EnemySpawnPoint;
 
-	public Transform TowerPrefab;
+	public Transform Tier1TowerPrefab;
+	public Transform Tier2TowerPrefab;
 	public Transform TowerSpawnPoint;
 
-	public float timeBetweenWaves = 5.9f;
+	public float timeBetweenWaves = 50f;
 
 	public Text waveCountdownText;
 	public Text hpText;
@@ -22,7 +23,7 @@ public class GameMaster : MonoBehaviour
 
 	private int waveNumber = 1;
 
-	private int[] numOfEnemies = new int[10] {5, 5, 5, 5, 5, 5, 5, 5, 5, 5};
+	private int[] numOfEnemies = new int[10] {50, 50, 50, 50, 50, 50, 50, 50, 50, 50};
 
 
 	void Start()
@@ -30,7 +31,7 @@ public class GameMaster : MonoBehaviour
 		hp = 0;
 		money = 0;
 		HpChange(30);
-		MoneyChange(20);
+		MoneyChange(40);
 	}
 
 	void Update()
@@ -76,11 +77,26 @@ public class GameMaster : MonoBehaviour
 
 	public void Buy1TierTower()
 	{
+		if (money>=10)
+		{
+			MoneyChange(-10);
+			Transform new_towerT = Instantiate(Tier1TowerPrefab, TowerSpawnPoint.position, TowerSpawnPoint.rotation);
+			
+			Turret_gun new_tower = new_towerT.GetComponent<Turret_gun>();
+			new_tower.test();
+		}
+		else
+		{
+			return;
+		}
+	}
 
+	public void Buy2TierTower()
+	{
 		if (money>=20)
 		{
 			MoneyChange(-20);
-			Instantiate(TowerPrefab, TowerSpawnPoint.position, TowerSpawnPoint.rotation);
+			Transform new_tower = Instantiate(Tier2TowerPrefab, TowerSpawnPoint.position, TowerSpawnPoint.rotation);
 		}
 		else
 		{
