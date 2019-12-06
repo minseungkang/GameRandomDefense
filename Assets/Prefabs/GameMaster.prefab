@@ -50,6 +50,8 @@ MonoBehaviour:
     type: 3}
   Tier2TowerPrefab: {fileID: 1641714024248568325, guid: a8080036fd6637a4caf30eee292839a0,
     type: 3}
+  Tier3TowerPrefab: {fileID: 391244155666478995, guid: 1275b96560c20d947b56c7299ab75d88,
+    type: 3}
   TowerSpawnPoint: {fileID: 0}
   timeBetweenWaves: 50
   waveCountdownText: {fileID: 0}

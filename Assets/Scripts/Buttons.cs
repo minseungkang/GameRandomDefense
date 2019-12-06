@@ -17,4 +17,9 @@ public class Buttons : MonoBehaviour
 	{
 		GM.GetComponent<GameMaster>().Buy2TierTower();
 	}
+
+	public void OnClickBuy3TierTOwer()
+	{
+		GM.GetComponent<GameMaster>().Buy3TierTower();
+	}
 }

@@ -9,6 +9,7 @@ public class GameMaster : MonoBehaviour
 
 	public Transform Tier1TowerPrefab;
 	public Transform Tier2TowerPrefab;
+	public Transform Tier3TowerPrefab;
 	public Transform TowerSpawnPoint;
 
 	public float timeBetweenWaves = 50f;
@@ -82,8 +83,6 @@ public class GameMaster : MonoBehaviour
 			MoneyChange(-10);
 			Transform new_towerT = Instantiate(Tier1TowerPrefab, TowerSpawnPoint.position, TowerSpawnPoint.rotation);
 			
-			Turret_gun new_tower = new_towerT.GetComponent<Turret_gun>();
-			new_tower.test();
 		}
 		else
 		{
@@ -97,6 +96,19 @@ public class GameMaster : MonoBehaviour
 		{
 			MoneyChange(-20);
 			Transform new_tower = Instantiate(Tier2TowerPrefab, TowerSpawnPoint.position, TowerSpawnPoint.rotation);
+		}
+		else
+		{
+			return;
+		}
+	}
+
+	public void Buy3TierTower()
+	{
+		if (money>=30)
+		{
+			MoneyChange(-30);
+			Transform new_tower = Instantiate(Tier3TowerPrefab, TowerSpawnPoint.position, TowerSpawnPoint.rotation);
 		}
 		else
 		{

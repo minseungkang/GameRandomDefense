@@ -21,6 +21,7 @@ public class Turret : MonoBehaviour
 	[Header("Attributes")]
 
 	public float range = 20f;
+    public float fireRate = 1f;
     protected float attackPower = 10f;
 
 	[Header("Unity Setup Fields")]
@@ -90,13 +91,15 @@ public class Turret : MonoBehaviour
         Color setColor,
         float setSpeed = 20f,
         float setRange = 20f,
-        float setAttackPower = 10f
+        float setAttackPower = 10f,
+        float setFireRate = 1f
         )
     {
         moveSpeed = setSpeed;
         hoverColor = setColor;
         range = setRange;
         attackPower = setAttackPower;
+        fireRate = setFireRate;
     }
 
 
