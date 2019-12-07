@@ -8,4 +8,13 @@ public class TowerAttributes : MonoBehaviour
     {
         UnitId, Name, TowerType, Atk, Rank, IsGOTY
     }
+
+    public enum Types
+    {
+        Sword, Gun, Magic
+    }
+
+    public static int MaxRank { get; } = 3;
+
+    public static int MinRank { get; } = 1;
 }

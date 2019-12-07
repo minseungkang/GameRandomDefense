@@ -1,6 +1,8 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
 
 public class GameMaster : MonoBehaviour
 {
@@ -25,6 +27,9 @@ public class GameMaster : MonoBehaviour
 	private int waveNumber = 1;
 
 	private int[] numOfEnemies = new int[10] {10, 10, 10, 10, 10, 10, 10, 10, 10, 10};
+    private int[] costs = new int[3] {10, 20, 30};
+    public GachaManager gachaManager;
+    private Dictionary<string, Transform> towerDictByType = new Dictionary<string, Transform>();
 
 
 	void Start()
@@ -34,6 +39,9 @@ public class GameMaster : MonoBehaviour
 		HpChange(20);
 		MoneyChange(40);
 		GameObject.Find("GameoverUI").GetComponent<Canvas>().enabled = false;
+        towerDictByType.Add(TowerAttributes.Types.Gun.ToString(), Tier1TowerPrefab);
+        towerDictByType.Add(TowerAttributes.Types.Sword.ToString(), Tier2TowerPrefab);
+        towerDictByType.Add(TowerAttributes.Types.Magic.ToString(), Tier3TowerPrefab);
 	}
 
 	void Update()
@@ -142,5 +150,27 @@ public class GameMaster : MonoBehaviour
 			return;
 		}
 	}
+
+    public void GachaTowerRank(int rank)
+    {
+        // rank range validation
+        if (rank > TowerAttributes.MaxRank || rank < TowerAttributes.MinRank)
+        {
+            return;
+        }
+
+        // cost check
+        if (money < costs[rank - 1])
+        {
+            return;
+        }
+
+        MoneyChange(-1 * costs[rank - 1]);
+
+        var turretInfoDict = gachaManager.gacha(rank);
+        Turret turret = Instantiate(towerDictByType[turretInfoDict["TowerType"]], TowerSpawnPoint.position, TowerSpawnPoint.rotation).gameObject.GetComponent<Turret>();
+        turret.setTurretPreference(Color.blue, 20f, 20f, Convert.ToSingle(turretInfoDict["Atk"]), 1f);
+        Debug.Log(turretInfoDict["Name"]);
+    }
 
 }

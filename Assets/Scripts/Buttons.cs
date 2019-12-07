@@ -22,4 +22,9 @@ public class Buttons : MonoBehaviour
 	{
 		GM.GetComponent<GameMaster>().Buy3TierTower();
 	}
+
+    public void OnClickGacha1TierTower()
+    {
+        GM.GetComponent<GameMaster>().GachaTowerRank(1);
+    }
 }
