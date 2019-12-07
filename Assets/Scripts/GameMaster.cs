@@ -165,9 +165,8 @@ public class GameMaster : MonoBehaviour
         if (hp > 10)
         {
             HpChange(-10);
+            MoneyChange(10);
         }
-
-        MoneyChange(10);
     }
 
     public void UseSkillRedbull()
