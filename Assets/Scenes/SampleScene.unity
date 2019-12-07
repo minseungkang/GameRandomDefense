@@ -272,7 +272,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 124641852}
-        m_MethodName: OnClickBuy1TierTower
+        m_MethodName: OnClickGacha1TierTower
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2820,6 +2820,11 @@ PrefabInstance:
       propertyPath: moneyText
       value: 
       objectReference: {fileID: 17120034}
+    - target: {fileID: 557871197148235492, guid: eb06c9142fb2e5d4d8188b8698242785,
+        type: 3}
+      propertyPath: gachaManager
+      value: 
+      objectReference: {fileID: 1710639972}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb06c9142fb2e5d4d8188b8698242785, type: 3}
 --- !u!1001 &3625534841131265368
