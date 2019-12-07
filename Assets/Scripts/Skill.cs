@@ -105,7 +105,7 @@ public class Skill : MonoBehaviour
 
     internal void UseChilldown(GameObject[] currentTurrets)
     {
-        timeChilldown = 10f;
+        timeChilldown += 10f;
         flagChilldown = true;
 
         foreach (GameObject t in currentTurrets)
