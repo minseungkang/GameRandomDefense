@@ -2954,6 +2954,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f71fce212d6fa0d439525fcbadf3a5c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1710639975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1710639971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a40cceb905777644a91d5abba776df37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1737297799
 GameObject:
   m_ObjectHideFlags: 0
@@ -3883,6 +3895,11 @@ PrefabInstance:
       propertyPath: moneyText
       value: 
       objectReference: {fileID: 17120034}
+    - target: {fileID: 557871197148235492, guid: eb06c9142fb2e5d4d8188b8698242785,
+        type: 3}
+      propertyPath: timeBetweenWaves
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb06c9142fb2e5d4d8188b8698242785, type: 3}
 --- !u!1001 &3625534841131265368
