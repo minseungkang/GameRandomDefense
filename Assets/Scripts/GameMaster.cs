@@ -12,7 +12,7 @@ public class GameMaster : MonoBehaviour
 	public Transform Tier3TowerPrefab;
 	public Transform TowerSpawnPoint;
 
-	public float timeBetweenWaves = 10f;
+	public float timeBetweenWaves = 50f;
 
 	public Text waveCountdownText;
 	public Text hpText;
@@ -142,5 +142,47 @@ public class GameMaster : MonoBehaviour
 			return;
 		}
 	}
+
+    public void UseSkillSteam()
+    {
+        if (money >= 25)
+        {
+            MoneyChange(-25);
+        }
+    }
+
+    public void UseSkillOverClock()
+    {
+        if (money >= 15)
+        {
+            MoneyChange(-15);
+            this.GetComponent<Skill>().UseOverclock(GameObject.FindGameObjectsWithTag("Turret"));
+        }
+    }
+
+    public void UseSkillOverworked()
+    {
+        if (hp > 10)
+        {
+            HpChange(-10);
+        }
+
+        MoneyChange(10);
+    }
+
+    public void UseSkillRedbull()
+    {
+        if (hp > 5)
+        {
+            HpChange(-5);
+            this.GetComponent<Skill>().UseRedbull(GameObject.FindGameObjectsWithTag("Turret"));
+        }
+    }
+
+    public void UseSkillChilldown()
+    {
+        HpChange(5);
+        this.GetComponent<Skill>().UseChilldown(GameObject.FindGameObjectsWithTag("Turret"));
+    }
 
 }

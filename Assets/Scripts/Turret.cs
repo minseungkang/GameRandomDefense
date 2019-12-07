@@ -24,7 +24,11 @@ public class Turret : MonoBehaviour
     public float fireRate = 1f;
     protected float attackPower = 10f;
 
-	[Header("Unity Setup Fields")]
+    protected float skillMultiplier1 = 1f;
+    protected float skillMultiplier2 = 1f;
+    protected float skillMultiplier3 = 1f;
+
+    [Header("Unity Setup Fields")]
 
 	protected string enemyTag = "Enemy";
 
@@ -100,6 +104,46 @@ public class Turret : MonoBehaviour
         range = setRange;
         attackPower = setAttackPower;
         fireRate = setFireRate;
+    }
+
+    public void FasterTurret(float delta)
+    {
+        fireRate += delta;
+    }
+
+    public void SlowerTurret(float delta)
+    {
+        fireRate -= delta;
+    }
+
+    public void ActivateSkill1()
+    {
+        skillMultiplier1 = 1.3f;
+    }
+
+    public void DeactivateSkill1()
+    {
+        skillMultiplier1 = 1f;
+    }
+
+    public void ActivateSkill2()
+    {
+        skillMultiplier2 = 1.3f;
+    }
+
+    public void DeactivateSkill2()
+    {
+        skillMultiplier2 = 1f;
+    }
+
+    public void ActivateSkill3()
+    {
+        skillMultiplier3 = 0.7f;
+    }
+
+    public void DeactivateSkill3()
+    {
+        skillMultiplier3 = 1f;
     }
 
 

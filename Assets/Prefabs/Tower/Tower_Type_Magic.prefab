@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2819613279610823229}
   m_Layer: 0
   m_Name: Tower_Type_Magic
-  m_TagString: Untagged
+  m_TagString: Turret
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

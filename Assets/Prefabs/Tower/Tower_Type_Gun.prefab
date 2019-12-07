@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 1164180233243312748}
   m_Layer: 0
   m_Name: Tower_Type_Gun
-  m_TagString: Untagged
+  m_TagString: Turret
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -96,7 +96,6 @@ MonoBehaviour:
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   range: 20
   fireRate: 1
-  enemyTag: Enemy
   partToRotate: {fileID: 8966997637832915783}
   turnSpeed: 10
   bulletPrefab: {fileID: 81765949354861285, guid: e0c9c2ef4d15353469638aa55732ee69,

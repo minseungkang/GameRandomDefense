@@ -65,7 +65,7 @@ public class Turret_Magic : Turret
     	magicAttackPosition.y = 2.5f;
     	GameObject magicAttackGO = (GameObject)Instantiate(MagicAttackPrefab, magicAttackPosition, target.rotation);
     	MagicAttack magicAttack = magicAttackGO.GetComponent<MagicAttack>();
-    	magicAttack.setAttackPower(attackPower);
+    	magicAttack.setAttackPower(attackPower * skillMultiplier1 * skillMultiplier2 * skillMultiplier3);
 
     	Destroy(magicAttackGO, 0.2f);
     }	

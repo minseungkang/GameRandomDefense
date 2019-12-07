@@ -67,7 +67,7 @@ public class Turret_sword : Turret
     	swordlinePosition.y = 2.5f;
     	GameObject swordLineGO = (GameObject)Instantiate(SwordLinePrefab, swordlinePosition, firePoint.rotation);
     	SwordLine swordLine = swordLineGO.GetComponent<SwordLine>();
-    	swordLine.setAttackPower(attackPower);
+    	swordLine.setAttackPower(attackPower * skillMultiplier1 * skillMultiplier2 * skillMultiplier3);
 
     	Destroy(swordLineGO, 0.2f);
     }	

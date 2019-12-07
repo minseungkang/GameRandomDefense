@@ -473,7 +473,7 @@ GameObject:
   - component: {fileID: 114714944870974680}
   m_Layer: 0
   m_Name: Tower_Type_Sword
-  m_TagString: Untagged
+  m_TagString: Turret
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -523,9 +523,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   range: 20
+  fireRate: 1
   partToRotate: {fileID: 6724206318502898048}
   turnSpeed: 10
-  fireRate: 1
   SwordLinePrefab: {fileID: 54292263374338457, guid: e542337ab5514394d8a230ce0ed5de62,
     type: 3}
   firePoint: {fileID: 2231130392697903273}

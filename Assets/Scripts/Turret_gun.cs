@@ -60,7 +60,7 @@ public class Turret_gun : Turret
     {
         GameObject bulletGO = (GameObject)Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Bullet bullet = bulletGO.GetComponent<Bullet>();
-        bullet.setBulletPower(attackPower);
+        bullet.setBulletPower(attackPower * skillMultiplier1 * skillMultiplier2 * skillMultiplier3);
 
         if (bullet != null)
             bullet.Seek(target);
