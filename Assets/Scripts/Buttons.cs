@@ -47,4 +47,9 @@ public class Buttons : MonoBehaviour
     {
         GM.GetComponent<GameMaster>().UseSkillChilldown();
     }
+    
+    public void OnClickGacha1TierTower()
+    {
+        GM.GetComponent<GameMaster>().GachaTowerRank(1);
+    }
 }
