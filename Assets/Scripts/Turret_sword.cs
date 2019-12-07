@@ -15,7 +15,7 @@ public class Turret_sword : Turret
     void Start()
     {
     	init_turret();
-    	setTurretPreference(Color.blue, 20f, 10f, 15f, 1f);
+    	//setTurretPreference(Color.blue, 20f, 10f, 15f, 1f);
     	// setTurretPreference( 선택색깔, 이동속도, 사거리, 공격력, 공격속도 )
     }
 
@@ -52,7 +52,7 @@ public class Turret_sword : Turret
     	float dir = Vector3.Distance(target.position, transform.position);
 
     	// 근접공격 타워는 적 인식은 10f 바깥에 있는 것부터 하지만 공격 자체는 7f 안에 들어와야만 한다
-    	if (fireCountdown <= 0f && dir <= 7f)
+    	if (fireCountdown <= 0f && dir <= range-10f)
         {
             Attack();
             fireCountdown = 1f / fireRate;

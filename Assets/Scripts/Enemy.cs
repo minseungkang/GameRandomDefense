@@ -14,14 +14,16 @@ public class Enemy : MonoBehaviour
 	private Transform target;
 	private int wavepointIndex = 0;
 
-	private float hp;
+	public float hp;
+	private int waveNum;
+
 	public Slider hpbar;
 
 	void Start()
 	{
 		target = Waypoints.points[0];
 		hpbar = transform.Find("Canvas/Slider").GetComponent<Slider>();
-		setHp(20f);
+		setHp(50f * waveNum);
 		setSpeed(30f);
 		resetSlow();
 	}
@@ -55,6 +57,11 @@ public class Enemy : MonoBehaviour
 		}
 	}
 
+	public void setWaveNum(int num)
+	{
+		waveNum = num;
+	}
+
 	void GetNextWaypoint()
 	{
 		wavepointIndex++;
@@ -84,12 +91,12 @@ public class Enemy : MonoBehaviour
 		slow_duration = 0f;
 	}
 
-	void setSpeed(float set_speed)
+	public void setSpeed(float set_speed)
 	{
 		speed = set_speed;
 	}
 
-	void setHp(float set_hp)
+	public void setHp(float set_hp)
 	{
 		hp = set_hp;
 		hpbar.minValue = 0;

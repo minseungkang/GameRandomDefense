@@ -14,7 +14,7 @@ public class Turret_gun : Turret
     void Start()
     {
     	init_turret();
-    	setTurretPreference(Color.blue, 20f, 20f, 10f, 2f);
+    	//setTurretPreference(Color.blue, 20f, 20f, 10f, 2f);
     	// setTurretPreference( 선택색깔, 이동속도, 사거리, 공격력, 공격속도 )
     }
 

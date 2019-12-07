@@ -52,4 +52,14 @@ public class Buttons : MonoBehaviour
     {
         GM.GetComponent<GameMaster>().GachaTowerRank(1);
     }
+
+    public void OnClickGacha2TierTower()
+    {
+        GM.GetComponent<GameMaster>().GachaTowerRank(2);
+    }
+
+    public void OnClickGacha3TierTower()
+    {
+        GM.GetComponent<GameMaster>().GachaTowerRank(3);
+    }
 }

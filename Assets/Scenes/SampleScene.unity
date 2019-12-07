@@ -146,7 +146,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -83, y: -152.59998}
+  m_AnchoredPosition: {x: -83, y: -145.79999}
   m_SizeDelta: {x: 120, y: 65}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &17120034
@@ -226,8 +226,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -163.7, y: -344}
-  m_SizeDelta: {x: 147.5, y: 51.8}
+  m_AnchoredPosition: {x: -240, y: -300}
+  m_SizeDelta: {x: 70, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &124641849
 MonoBehaviour:
@@ -270,7 +270,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 124641852}
-        m_MethodName: OnClickBuy1TierTower
+        m_MethodName: OnClickGacha1TierTower
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -365,8 +365,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -88.1, y: -527}
-  m_SizeDelta: {x: 147.5, y: 35}
+  m_AnchoredPosition: {x: -85, y: -357}
+  m_SizeDelta: {x: 120, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &127283166
 MonoBehaviour:
@@ -604,7 +604,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Buy Sword Tower
+  m_Text: 'Level 2 Tower
 
     Cost 20'
 --- !u!222 &181975443
@@ -652,8 +652,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -163.7, y: -405}
-  m_SizeDelta: {x: 147.5, y: 51.8}
+  m_AnchoredPosition: {x: -150, y: -300}
+  m_SizeDelta: {x: 70, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &198705261
 MonoBehaviour:
@@ -709,7 +709,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 198705261}
-        m_MethodName: OnClickBuy2TierTower
+        m_MethodName: OnClickGacha2TierTower
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -973,8 +973,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -239.5, y: -567}
-  m_SizeDelta: {x: 147.5, y: 35}
+  m_AnchoredPosition: {x: -215, y: -397}
+  m_SizeDelta: {x: 120, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &396983143
 MonoBehaviour:
@@ -1143,7 +1143,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Buy Magic Tower
+  m_Text: 'Level 3 Tower
 
     Cost 30'
 --- !u!222 &476096776
@@ -1449,8 +1449,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -88.4, y: -567}
-  m_SizeDelta: {x: 147.5, y: 35}
+  m_AnchoredPosition: {x: -84.99997, y: -397}
+  m_SizeDelta: {x: 120, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &545251678
 MonoBehaviour:
@@ -1756,8 +1756,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -239.4, y: -527}
-  m_SizeDelta: {x: 147.5, y: 35}
+  m_AnchoredPosition: {x: -214.99997, y: -357}
+  m_SizeDelta: {x: 120, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &775614260
 MonoBehaviour:
@@ -2706,7 +2706,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -83.00003, y: -254.09998}
+  m_AnchoredPosition: {x: -83.00003, y: -231.29999}
   m_SizeDelta: {x: 120, y: 65}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1482225680
@@ -3000,8 +3000,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -199, y: -254.1}
-  m_SizeDelta: {x: 76.900024, y: 76.899994}
+  m_AnchoredPosition: {x: -199, y: -231.3}
+  m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1737297801
 MonoBehaviour:
@@ -3149,8 +3149,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -199, y: -152.6}
-  m_SizeDelta: {x: 76.900024, y: 76.899994}
+  m_AnchoredPosition: {x: -199, y: -143.3}
+  m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1743421317
 MonoBehaviour:
@@ -3220,7 +3220,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -199, y: -58.100006}
-  m_SizeDelta: {x: 76.900024, y: 76.9}
+  m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1747431889
 MonoBehaviour:
@@ -3323,7 +3323,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Buy Gun Tower
+  m_Text: 'Level 1 Tower
 
     Cost 10'
 --- !u!222 &1868652687
@@ -3371,8 +3371,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -163.7, y: -606.4}
-  m_SizeDelta: {x: 147.5, y: 35}
+  m_AnchoredPosition: {x: -215, y: -437}
+  m_SizeDelta: {x: 120, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1931799522
 MonoBehaviour:
@@ -3587,8 +3587,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -163.7, y: -466}
-  m_SizeDelta: {x: 147.5, y: 51.8}
+  m_AnchoredPosition: {x: -60, y: -300}
+  m_SizeDelta: {x: 70, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1972182168
 MonoBehaviour:
@@ -3631,7 +3631,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1972182171}
-        m_MethodName: OnClickBuy3TierTOwer
+        m_MethodName: OnClickGacha3TierTower
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3900,6 +3900,11 @@ PrefabInstance:
       propertyPath: timeBetweenWaves
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 557871197148235492, guid: eb06c9142fb2e5d4d8188b8698242785,
+        type: 3}
+      propertyPath: gachaManager
+      value: 
+      objectReference: {fileID: 1710639972}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb06c9142fb2e5d4d8188b8698242785, type: 3}
 --- !u!1001 &3625534841131265368

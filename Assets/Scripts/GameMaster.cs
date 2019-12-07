@@ -14,7 +14,7 @@ public class GameMaster : MonoBehaviour
 	public Transform Tier3TowerPrefab;
 	public Transform TowerSpawnPoint;
 
-	public float timeBetweenWaves = 50f;
+	public float timeBetweenWaves = 30f;
 
 	public Text waveCountdownText;
 	public Text hpText;
@@ -96,7 +96,8 @@ public class GameMaster : MonoBehaviour
 
 	void SpawnEnemy()
 	{
-		Instantiate(enemyPrefab, EnemySpawnPoint.position, EnemySpawnPoint.rotation);
+		Enemy enemy = Instantiate(enemyPrefab, EnemySpawnPoint.position, EnemySpawnPoint.rotation).gameObject.GetComponent<Enemy>();
+		enemy.setWaveNum(waveNumber);
 	}
 
 	public void HpChange(int delta)
@@ -150,7 +151,7 @@ public class GameMaster : MonoBehaviour
 			return;
 		}
 	}
-	
+
     public void UseSkillSteam()
     {
         if (money >= 25)
