@@ -1,5 +1,7 @@
 ﻿using System;
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 
 public class Skill : MonoBehaviour
@@ -47,7 +49,6 @@ public class Skill : MonoBehaviour
         }
         else if (flagChilldown)
         {
-            flagChilldown = false;
             DeactChilldown(currentTurrets);
         }
 

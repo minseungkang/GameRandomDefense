@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.EventSystems;
 
 public class GameMaster : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class GameMaster : MonoBehaviour
 	public Transform Tier3TowerPrefab;
 	public Transform TowerSpawnPoint;
 
-	public float timeBetweenWaves = 30f;
+    public float timeBetweenWaves = 30f;
 
 	public Text waveCountdownText;
 	public Text hpText;
@@ -47,7 +48,9 @@ public class GameMaster : MonoBehaviour
 	void Update()
 	{
 		checkCountDown();
-	}
+        //if (Input.GetMouseButtonDown(0))
+        //    Debug.Log("Name: " + EventSystem.current.currentSelectedGameObject.name);
+    }
 
 	void checkCountDown()
 	{
@@ -157,6 +160,7 @@ public class GameMaster : MonoBehaviour
         if (money >= 25)
         {
             MoneyChange(-25);
+            GetComponent<SteamStart>().UseSteam();
         }
     }
 
@@ -165,7 +169,7 @@ public class GameMaster : MonoBehaviour
         if (money >= 15)
         {
             MoneyChange(-15);
-            this.GetComponent<Skill>().UseOverclock(GameObject.FindGameObjectsWithTag("Turret"));
+            GetComponent<Skill>().UseOverclock(GameObject.FindGameObjectsWithTag("Turret"));
         }
     }
 
@@ -183,14 +187,14 @@ public class GameMaster : MonoBehaviour
         if (hp > 5)
         {
             HpChange(-5);
-            this.GetComponent<Skill>().UseRedbull(GameObject.FindGameObjectsWithTag("Turret"));
+            GetComponent<Skill>().UseRedbull(GameObject.FindGameObjectsWithTag("Turret"));
         }
     }
 
     public void UseSkillChilldown()
     {
         HpChange(5);
-        this.GetComponent<Skill>().UseChilldown(GameObject.FindGameObjectsWithTag("Turret"));
+        GetComponent<Skill>().UseChilldown(GameObject.FindGameObjectsWithTag("Turret"));
     }
 
     public void GachaTowerRank(int rank)
