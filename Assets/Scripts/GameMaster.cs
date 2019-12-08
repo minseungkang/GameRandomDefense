@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.EventSystems;
+using System.Xml;
 
 public class GameMaster : MonoBehaviour
 {
@@ -20,18 +21,27 @@ public class GameMaster : MonoBehaviour
 	public Text waveCountdownText;
 	public Text hpText;
 	public Text moneyText;
+	public Text roundText;
+	public Text buyText;
 
 	private int hp;
 	private int money;
 	private float countdown = 1f;
+	private float roundTextCountdown = 3f;
+	private float buyTextCountdown = 3f;
 
 	private int waveNumber = 1;
 
-	private int[] numOfEnemies = new int[10] {50, 50, 50, 50, 50, 50, 50, 50, 50, 50};
+	private int[] numOfEnemies = new int[5] {50, 50, 50, 50, 10};
     private int[] costs = new int[3] {10, 20, 30};
     public GachaManager gachaManager;
     private Dictionary<string, Transform> towerDictByType = new Dictionary<string, Transform>();
 
+	private const string EnemyInfoFileName = "EnemyInfo";
+	
+	private Dictionary<string, int> enemyHpDict;
+	private Dictionary<string, string> enemyNameDict;
+	private XmlDocument enemyInfoXml;
 
 	void Start()
 	{
@@ -43,6 +53,24 @@ public class GameMaster : MonoBehaviour
         towerDictByType.Add(TowerAttributes.Types.Gun.ToString(), Tier1TowerPrefab);
         towerDictByType.Add(TowerAttributes.Types.Sword.ToString(), Tier2TowerPrefab);
         towerDictByType.Add(TowerAttributes.Types.Magic.ToString(), Tier3TowerPrefab);
+	
+        enemyInfoXml = new XmlDocument();
+		TextAsset elems = Resources.Load<TextAsset>(EnemyInfoFileName);	
+		enemyInfoXml.LoadXml(elems.text);
+		XmlNodeList children = enemyInfoXml.GetElementsByTagName("Enemy");
+
+		enemyHpDict = new Dictionary<string, int>();
+		enemyNameDict = new Dictionary<string, string>();
+		foreach (XmlNode row in children)
+		{
+			//Debug.Log(row.Attributes["UnitId"].Value.ToString());
+			enemyHpDict.Add(row.Attributes["UnitId"].Value.ToString(), Convert.ToInt32(row.Attributes["Hp"].Value));
+			enemyNameDict.Add(row.Attributes["UnitId"].Value.ToString(),row.Attributes["Name"].Value.ToString());
+		}
+
+		roundText.text = "";
+		buyText.text = "";
+	
 	}
 
 	void Update()
@@ -52,6 +80,7 @@ public class GameMaster : MonoBehaviour
 
 	void checkCountDown()
 	{
+		// 라운드 카운트다운
 		if (countdown <= 0f)
 		{
 			// 남아있는 enemy가 몇 개인지 세고, 모든 enemy를 없앤다.
@@ -81,10 +110,25 @@ public class GameMaster : MonoBehaviour
 
 		countdown -= Time.deltaTime;
 		waveCountdownText.text = Mathf.Floor(countdown).ToString();
+
+		// 라운드 텍스트
+		if (roundTextCountdown <= 0f)
+			roundText.text = "";
+		roundTextCountdown -= Time.deltaTime;
+
+		// 타워 구입 텍스트
+		if (buyTextCountdown <= 0f)
+			buyText.text = "";
+		buyTextCountdown -= Time.deltaTime;
+
+
 	}
 
 	IEnumerator SpawnWave()
 	{
+		roundTextCountdown = 3f;
+		roundText.text = "round " + waveNumber.ToString() +": " + enemyNameDict["000"+waveNumber.ToString()];
+
 		for(int i=0; i<numOfEnemies[waveNumber-1];i++)
 		{
 			SpawnEnemy();
@@ -99,6 +143,7 @@ public class GameMaster : MonoBehaviour
 	{
 		Enemy enemy = Instantiate(enemyPrefab, EnemySpawnPoint.position, EnemySpawnPoint.rotation).gameObject.GetComponent<Enemy>();
 		enemy.setWaveNum(waveNumber);
+		enemy.setHp(enemyHpDict["000"+waveNumber.ToString()]);
 	}
 
 	public void HpChange(int delta)
@@ -214,10 +259,15 @@ public class GameMaster : MonoBehaviour
 
         var turretInfoDict = gachaManager.gacha(rank);
         Turret turret = Instantiate(towerDictByType[turretInfoDict["TowerType"]], TowerSpawnPoint.position, TowerSpawnPoint.rotation).gameObject.GetComponent<Turret>();
+        
+        //Debug.Log(turretInfoDict["Firerate"]);
+        
         turret.setTurretPreference(Color.blue, 20f, 20f, Convert.ToSingle(turretInfoDict["Atk"]), 1f);
         var material = Resources.Load<Material>("Material/Turret/" + turretInfoDict["UnitId"].ToString());
         turret.SetMaterial(material);
-        Debug.Log(turretInfoDict["Name"]);
+        //Debug.Log(turretInfoDict["Name"]);
+        buyText.text = "You got " + turretInfoDict["Name"].ToString();
+        buyTextCountdown = 3f;
     }
 
     public void SkipToNextRound()

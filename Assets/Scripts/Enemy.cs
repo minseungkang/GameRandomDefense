@@ -1,11 +1,11 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
-
 	private float speed;
 
 	private float slow_rate;		// slow_rate는 백분율로 속도를 감소시키게 함.
@@ -19,13 +19,18 @@ public class Enemy : MonoBehaviour
 
 	public Slider hpbar;
 
+
 	void Start()
 	{
 		target = Waypoints.points[0];
 		hpbar = transform.Find("Canvas/Slider").GetComponent<Slider>();
-		setHp(50f * waveNum);
+		//setHp(50f * waveNum);
+		setHpBar();
 		setSpeed(30f);
 		resetSlow();
+
+        var material = Resources.Load<Material>("Material/Enemy/000" + waveNum.ToString());
+        SetMaterial(material);
 	}
 
 	void Update()
@@ -99,6 +104,10 @@ public class Enemy : MonoBehaviour
 	public void setHp(float set_hp)
 	{
 		hp = set_hp;
+	}
+
+	public void setHpBar()
+	{
 		hpbar.minValue = 0;
 		hpbar.maxValue = hp;
 		hpbar.value = hp;
@@ -116,4 +125,8 @@ public class Enemy : MonoBehaviour
 		}
 	}
 
+    public void SetMaterial(Material material)
+    {
+        this.GetComponentInChildren<MeshRenderer>().material = material;
+    }
 }
