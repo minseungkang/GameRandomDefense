@@ -20,7 +20,6 @@ public class SkillRail : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
 
     void OnMouseDown()
     {
-        //Instantiate(steamLogoPrefab, transform.position, transform.rotation);
         selected = true;
     }
 

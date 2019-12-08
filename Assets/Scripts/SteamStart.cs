@@ -13,14 +13,16 @@ public class SteamStart : MonoBehaviour
     public static GameObject[] skillRails;
     public bool activated = false;
 
+    private Vector3[] posModifier = new Vector3[4] 
+    {
+        new Vector3(-1f, 0f, 4f),
+        new Vector3(4f, 0f, 1f),
+        new Vector3(1f, 0f, -4f),
+        new Vector3(-4f, 0f, -1f)
+    };
+
     void Awake()
     {
-        //startingPoints = new Transform[4];
-        //for (int i=0; i<4; i++)
-        //{
-        //    transform.GetChild(i);
-        //}
-
         skillRails = GameObject.FindGameObjectsWithTag("Rail");
         
         foreach (GameObject sr in skillRails)
@@ -40,6 +42,11 @@ public class SteamStart : MonoBehaviour
         }
     }
 
+    public bool IsActive()
+    {
+        return activated;
+    }
+
     void Update()
     {
         if (activated)
@@ -56,10 +63,17 @@ public class SteamStart : MonoBehaviour
             MeshRenderer srm = skillRails[i].GetComponent<MeshRenderer>();
             if (srs.IsSelected())
             {
-                srs.Reset();
-                srm.enabled = false;
+                foreach (GameObject x in skillRails) {
+                    x.GetComponent<SkillRail>().Reset();
+                    x.GetComponent<MeshRenderer>().enabled = false;
+                }
 
-                Instantiate(steamLogoPrefab, Waypoints.points[(i)%4].position, srs.transform.rotation);
+                GameObject sobj = Instantiate(steamLogoPrefab, Waypoints.points[(i)%4].position + posModifier[i], Quaternion.Euler(0, 90 * i, 0)).gameObject;
+                Steam s = sobj.GetComponent<Steam>();
+                s.InitSteam(new Vector3(-1f, 0f, 0f));
+
+                activated = false;
+                break;
             }
         }
     }

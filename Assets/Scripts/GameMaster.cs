@@ -38,7 +38,7 @@ public class GameMaster : MonoBehaviour
 		hp = 0;
 		money = 0;
 		HpChange(20);
-		MoneyChange(40);
+		MoneyChange(100);
 		GameObject.Find("GameoverUI").GetComponent<Canvas>().enabled = false;
         towerDictByType.Add(TowerAttributes.Types.Gun.ToString(), Tier1TowerPrefab);
         towerDictByType.Add(TowerAttributes.Types.Sword.ToString(), Tier2TowerPrefab);
@@ -48,8 +48,6 @@ public class GameMaster : MonoBehaviour
 	void Update()
 	{
 		checkCountDown();
-        //if (Input.GetMouseButtonDown(0))
-        //    Debug.Log("Name: " + EventSystem.current.currentSelectedGameObject.name);
     }
 
 	void checkCountDown()
@@ -157,10 +155,11 @@ public class GameMaster : MonoBehaviour
 
     public void UseSkillSteam()
     {
-        if (money >= 25)
+        SteamStart ss = GetComponent<SteamStart>();
+        if (money >= 25 && !ss.IsActive())
         {
             MoneyChange(-25);
-            GetComponent<SteamStart>().UseSteam();
+            ss.UseSteam();
         }
     }
 
