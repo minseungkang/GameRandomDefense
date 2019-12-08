@@ -2,31 +2,31 @@
 <Root>
 	<Tower UnitId="1001" Name="The Legend Of Zelda : Breath of the Wild" TowerType="Sword" Atk="100" Firerate="1" Rank="3" IsGOTY="true"/>
   <Tower UnitId="1002" Name="Bioshock" TowerType="Gun" Atk="100" Firerate="3" Rank="3" IsGOTY="true"/>
-  <Tower UnitId="1003" Name="The Elder Scrolls V : SKYRIM" TowerType="Magic" Atk="100" Firerate="0.5" Rank="3" IsGOTY="true"/>
+  <Tower UnitId="1003" Name="The Elder Scrolls V : SKYRIM" TowerType="Magic" Atk="100" Firerate="0.6" Rank="3" IsGOTY="true"/>
   <Tower UnitId="1004" Name="Super Mario Odyssey" TowerType="Sword" Atk="100" Firerate="1" Rank="3" IsGOTY="false"/>
   <Tower UnitId="1005" Name="Red Dead Redemption 2" TowerType="Gun" Atk="100" Firerate="3" Rank="3" IsGOTY="false"/>
-  <Tower UnitId="1006" Name="Little Big Planet" TowerType="Magic" Atk="100" Firerate="0.5" Rank="3" IsGOTY="false"/>
+  <Tower UnitId="1006" Name="Little Big Planet" TowerType="Magic" Atk="100" Firerate="0.6" Rank="3" IsGOTY="false"/>
   <Tower UnitId="1007" Name="UNCHARTED 2" TowerType="Gun" Atk="100" Firerate="3" Rank="3" IsGOTY="false"/>
   <Tower UnitId="1008" Name="GTA 5" TowerType="Gun" Atk="100" Firerate="3" Rank="3" IsGOTY="false"/>
-  <Tower UnitId="1009" Name="Portal 2" TowerType="Magic" Atk="100" Firerate="0.5" Rank="3" IsGOTY="false"/>
+  <Tower UnitId="1009" Name="Portal 2" TowerType="Magic" Atk="100" Firerate="0.6" Rank="3" IsGOTY="false"/>
 
 	<Tower UnitId="2001" Name="The Witcher 3 : Wild Hunt" TowerType="Sword" Atk="70" Firerate="1" Rank="2" IsGOTY="false"/>
   <Tower UnitId="2002" Name="Medal Of Honor" TowerType="Gun" Atk="70" Firerate="3" Rank="2" IsGOTY="false"/>
-  <Tower UnitId="2003" Name="Celeste" TowerType="Magic" Atk="70" Firerate="0.5" Rank="2" IsGOTY="false"/>
+  <Tower UnitId="2003" Name="Celeste" TowerType="Magic" Atk="70" Firerate="0.6" Rank="2" IsGOTY="false"/>
   <Tower UnitId="2004" Name="Bloodborne" TowerType="Sword" Atk="70" Firerate="1" Rank="2" IsGOTY="false"/>
   <Tower UnitId="2005" Name="Overwatch" TowerType="Gun" Atk="70" Firerate="3" Rank="2" IsGOTY="false"/>
-  <Tower UnitId="2006" Name="Undertale" TowerType="Magic" Atk="70" Firerate="0.5" Rank="2" IsGOTY="false"/>
+  <Tower UnitId="2006" Name="Undertale" TowerType="Magic" Atk="70" Firerate="0.6" Rank="2" IsGOTY="false"/>
   <Tower UnitId="2007" Name="Monster Hunter : World" TowerType="Sword" Atk="70" Firerate="1" Rank="2" IsGOTY="false"/>
   <Tower UnitId="2008" Name="Team Fotress 2" TowerType="Gun" Atk="70" Firerate="3" Rank="2" IsGOTY="false"/>
-  <Tower UnitId="2009" Name="Journey" TowerType="Magic" Atk="70" Firerate="0.5" Rank="2" IsGOTY="false"/>
+  <Tower UnitId="2009" Name="Journey" TowerType="Magic" Atk="70" Firerate="0.6" Rank="2" IsGOTY="false"/>
   
   <Tower UnitId="3001" Name="Horizon Zero Dawn" TowerType="Sword" Atk="40" Firerate="1" Rank="1" IsGOTY="false"/>
   <Tower UnitId="3002" Name="Bio Hazard 7" TowerType="Gun" Atk="40" Firerate="3" Rank="1" IsGOTY="false"/>
-  <Tower UnitId="3003" Name="Nier:Automata" TowerType="Magic" Atk="40" Firerate="0.5" Rank="1" IsGOTY="false"/>
+  <Tower UnitId="3003" Name="Nier:Automata" TowerType="Magic" Atk="40" Firerate="0.6" Rank="1" IsGOTY="false"/>
   <Tower UnitId="3004" Name="Assassin Creed : Origin" TowerType="Sword" Atk="40" Firerate="1" Rank="1" IsGOTY="false"/>
   <Tower UnitId="3005" Name="PLAYERUNKNOWN'S BATTLEGROUNDS" TowerType="Gun" Atk="40" Firerate="3" Rank="1" IsGOTY="false"/>
-  <Tower UnitId="3006" Name="Final Fantasy 15" TowerType="Magic" Atk="40" Firerate="0.5" Rank="1" IsGOTY="false"/>
+  <Tower UnitId="3006" Name="Final Fantasy 15" TowerType="Magic" Atk="40" Firerate="0.6" Rank="1" IsGOTY="false"/>
   <Tower UnitId="3007" Name="Dark Souls 3" TowerType="Sword" Atk="40" Firerate="1" Rank="1" IsGOTY="false"/>
   <Tower UnitId="3008" Name="Fallout 4" TowerType="Gun" Atk="40" Firerate="1" Rank="1" IsGOTY="false"/>
-  <Tower UnitId="3009" Name="Ori and the Blind Forest" TowerType="Magic" Atk="40" Firerate="0.5" Rank="1" IsGOTY="false"/>
+  <Tower UnitId="3009" Name="Ori and the Blind Forest" TowerType="Magic" Atk="40" Firerate="0.6" Rank="1" IsGOTY="false"/>
 </Root>
