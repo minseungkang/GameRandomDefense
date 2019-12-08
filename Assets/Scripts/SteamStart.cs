@@ -59,7 +59,7 @@ public class SteamStart : MonoBehaviour
                 srs.Reset();
                 srm.enabled = false;
 
-                Instantiate(steamLogoPrefab, Waypoints.points[(i+1)%4].position, srs.transform.rotation);
+                Instantiate(steamLogoPrefab, Waypoints.points[(i)%4].position, srs.transform.rotation);
             }
         }
     }
