@@ -27,6 +27,6 @@
   <Tower UnitId="3005" Name="PLAYERUNKNOWN'S BATTLEGROUNDS" TowerType="Gun" Atk="40" Firerate="3" Rank="1" IsGOTY="false"/>
   <Tower UnitId="3006" Name="Final Fantasy 15" TowerType="Magic" Atk="40" Firerate="0.5" Rank="1" IsGOTY="false"/>
   <Tower UnitId="3007" Name="Dark Souls 3" TowerType="Sword" Atk="40" Firerate="1" Rank="1" IsGOTY="false"/>
-  <Tower UnitId="3008" Name="Fallout 4" TowerType="Gun" Atk="40" Firerate="1" Rank="3" IsGOTY="false"/>
+  <Tower UnitId="3008" Name="Fallout 4" TowerType="Gun" Atk="40" Firerate="1" Rank="1" IsGOTY="false"/>
   <Tower UnitId="3009" Name="Ori and the Blind Forest" TowerType="Magic" Atk="40" Firerate="0.5" Rank="1" IsGOTY="false"/>
 </Root>

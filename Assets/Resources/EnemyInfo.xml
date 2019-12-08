@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Root>
 
-  <Enemy UnitId="0001" Name="Duke Nukem Forever" Hp="100"/>
-  <Enemy UnitId="0002" Name="Metal Gear Survive" Hp="400"/>
-  <Enemy UnitId="0003" Name="Ghostbusters (2016)" Hp="1000"/>
-  <Enemy UnitId="0004" Name="Mighty No.9" Hp="2000"/>
-  <Enemy UnitId="0005" Name="E.T" Hp="10000"/>
+  <Enemy UnitId="0001" Name="Duke Nukem Forever" Hp="50"/>
+  <Enemy UnitId="0002" Name="Metal Gear Survive" Hp="200"/>
+  <Enemy UnitId="0003" Name="Ghostbusters (2016)" Hp="500"/>
+  <Enemy UnitId="0004" Name="Mighty No.9" Hp="1000"/>
+  <Enemy UnitId="0005" Name="E.T" Hp="5000"/>
 
 </Root>

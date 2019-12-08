@@ -14,7 +14,7 @@ public class Enemy : MonoBehaviour
 	private Transform target;
 	private int wavepointIndex = 0;
 
-	public float hp;
+	private float hp;
 	private int waveNum;
 
 	public Slider hpbar;

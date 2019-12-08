@@ -6,7 +6,7 @@ public class TowerAttributes : MonoBehaviour
 {
     public enum Attributes
     {
-        UnitId, Name, TowerType, Atk, Rank, IsGOTY
+        UnitId, Name, TowerType, Atk, Firerate,Rank, IsGOTY
     }
 
     public enum Types

@@ -67,7 +67,7 @@ public class GameMaster : MonoBehaviour
 			enemyHpDict.Add(row.Attributes["UnitId"].Value.ToString(), Convert.ToInt32(row.Attributes["Hp"].Value));
 			enemyNameDict.Add(row.Attributes["UnitId"].Value.ToString(),row.Attributes["Name"].Value.ToString());
 		}
-
+		
 		roundText.text = "";
 		buyText.text = "";
 	
@@ -144,6 +144,7 @@ public class GameMaster : MonoBehaviour
 		Enemy enemy = Instantiate(enemyPrefab, EnemySpawnPoint.position, EnemySpawnPoint.rotation).gameObject.GetComponent<Enemy>();
 		enemy.setWaveNum(waveNumber);
 		enemy.setHp(enemyHpDict["000"+waveNumber.ToString()]);
+		//Debug.Log(enemyHpDict["000"+waveNumber.ToString()]);
 	}
 
 	public void HpChange(int delta)
@@ -262,10 +263,12 @@ public class GameMaster : MonoBehaviour
         
         //Debug.Log(turretInfoDict["Firerate"]);
         
-        turret.setTurretPreference(Color.blue, 20f, 20f, Convert.ToSingle(turretInfoDict["Atk"]), 1f);
+        turret.setTurretPreference(Color.blue, 20f, 20f, Convert.ToSingle(turretInfoDict["Atk"]), Convert.ToSingle(turretInfoDict["Firerate"]));
         var material = Resources.Load<Material>("Material/Turret/" + turretInfoDict["UnitId"].ToString());
         turret.SetMaterial(material);
+
         //Debug.Log(turretInfoDict["Name"]);
+        
         buyText.text = "You got " + turretInfoDict["Name"].ToString();
         buyTextCountdown = 3f;
     }

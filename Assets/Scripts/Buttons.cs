@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Buttons : MonoBehaviour
 {
@@ -66,6 +67,11 @@ public class Buttons : MonoBehaviour
     public void OnClickSkipToNextRound()
     {
         GM.GetComponent<GameMaster>().SkipToNextRound();
+    }
+
+    public void OnClickReturnToTitle()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 
 }
