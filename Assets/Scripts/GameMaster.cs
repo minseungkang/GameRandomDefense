@@ -15,7 +15,7 @@ public class GameMaster : MonoBehaviour
 	public Transform Tier3TowerPrefab;
 	public Transform TowerSpawnPoint;
 
-    public float timeBetweenWaves = 30f;
+    public float timeBetweenWaves = 50f;
 
 	public Text waveCountdownText;
 	public Text hpText;
@@ -27,7 +27,7 @@ public class GameMaster : MonoBehaviour
 
 	private int waveNumber = 1;
 
-	private int[] numOfEnemies = new int[10] {10, 10, 10, 10, 10, 10, 10, 10, 10, 10};
+	private int[] numOfEnemies = new int[10] {50, 50, 50, 50, 50, 50, 50, 50, 50, 50};
     private int[] costs = new int[3] {10, 20, 30};
     public GachaManager gachaManager;
     private Dictionary<string, Transform> towerDictByType = new Dictionary<string, Transform>();
@@ -217,6 +217,11 @@ public class GameMaster : MonoBehaviour
         Turret turret = Instantiate(towerDictByType[turretInfoDict["TowerType"]], TowerSpawnPoint.position, TowerSpawnPoint.rotation).gameObject.GetComponent<Turret>();
         turret.setTurretPreference(Color.blue, 20f, 20f, Convert.ToSingle(turretInfoDict["Atk"]), 1f);
         Debug.Log(turretInfoDict["Name"]);
+    }
+
+    public void SkipToNextRound()
+    {
+    	countdown = 1f;
     }
 
 }

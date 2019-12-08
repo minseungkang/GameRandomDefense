@@ -62,4 +62,10 @@ public class Buttons : MonoBehaviour
     {
         GM.GetComponent<GameMaster>().GachaTowerRank(3);
     }
+
+    public void OnClickSkipToNextRound()
+    {
+        GM.GetComponent<GameMaster>().SkipToNextRound();
+    }
+
 }
