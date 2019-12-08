@@ -15,10 +15,10 @@ public class SteamStart : MonoBehaviour
 
     private Vector3[] posModifier = new Vector3[4] 
     {
-        new Vector3(-1f, 0f, 4f),
-        new Vector3(4f, 0f, 1f),
-        new Vector3(1f, 0f, -4f),
-        new Vector3(-4f, 0f, -1f)
+        new Vector3(-1f, -5f, 0f),
+        new Vector3(0f, -5f, 1f),
+        new Vector3(1f, -5f, -0f),
+        new Vector3(-0f, -5f, -1f)
     };
 
     void Awake()
@@ -68,7 +68,7 @@ public class SteamStart : MonoBehaviour
                     x.GetComponent<MeshRenderer>().enabled = false;
                 }
 
-                GameObject sobj = Instantiate(steamLogoPrefab, Waypoints.points[(i)%4].position + posModifier[i], Quaternion.Euler(0, 90 * i, 0)).gameObject;
+                GameObject sobj = Instantiate(steamLogoPrefab, Waypoints.points[(i)%4].position + posModifier[i], Quaternion.Euler(90, 90 * i, 0)).gameObject;
                 Steam s = sobj.GetComponent<Steam>();
                 s.InitSteam(new Vector3(-1f, 0f, 0f));
 

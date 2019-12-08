@@ -38,7 +38,7 @@ public class GameMaster : MonoBehaviour
 		hp = 0;
 		money = 0;
 		HpChange(20);
-		MoneyChange(100);
+		MoneyChange(40);
 		GameObject.Find("GameoverUI").GetComponent<Canvas>().enabled = false;
         towerDictByType.Add(TowerAttributes.Types.Gun.ToString(), Tier1TowerPrefab);
         towerDictByType.Add(TowerAttributes.Types.Sword.ToString(), Tier2TowerPrefab);
