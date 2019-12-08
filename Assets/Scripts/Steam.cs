@@ -13,7 +13,11 @@ public class Steam : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        col.GetComponent<Enemy>().Damaged(attackPower);
+        var enemy = col.GetComponent<Enemy>();
+        if (enemy)
+        {
+            enemy.Damaged(attackPower);
+        }
     }
 
     void Update()
