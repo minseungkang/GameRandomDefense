@@ -43,7 +43,6 @@ private Dictionary<int, List<Dictionary<string, string>>> UnitDictByRank = new D
             }
             UnitDictByRank[rank].Add(elem);
         }
-        Debug.Log(UnitDictByRank);
     }
 
     public Dictionary<string, string> gacha(int rank)

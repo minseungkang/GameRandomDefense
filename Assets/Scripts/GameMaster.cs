@@ -215,6 +215,8 @@ public class GameMaster : MonoBehaviour
         var turretInfoDict = gachaManager.gacha(rank);
         Turret turret = Instantiate(towerDictByType[turretInfoDict["TowerType"]], TowerSpawnPoint.position, TowerSpawnPoint.rotation).gameObject.GetComponent<Turret>();
         turret.setTurretPreference(Color.blue, 20f, 20f, Convert.ToSingle(turretInfoDict["Atk"]), 1f);
+        var material = Resources.Load<Material>("Material/Turret/" + turretInfoDict["UnitId"].ToString());
+        turret.SetMaterial(material);
         Debug.Log(turretInfoDict["Name"]);
     }
 

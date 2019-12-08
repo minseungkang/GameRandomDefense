@@ -247,4 +247,8 @@ public class Turret : MonoBehaviour
             rend.material.color = startColor;
     }
 
+    public void SetMaterial(Material material)
+    {
+        this.GetComponentInChildren<MeshRenderer>().material = material;
+    }
 }
